@@ -8,7 +8,7 @@ User:
     -has_many :projects
     -has_many :tasks
     _has_many :comments
-    -has_many :comments, through :task
+    -has_many :commented_tasks, through :comments, source: :task
     -has_many :tasks, through :project
     -username
     -email
